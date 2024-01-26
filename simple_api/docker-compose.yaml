@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  simple:
+    build: .
+    image: simple/api
+    container_name: simple_api
+    cpus: 0.25
+    mem_reservation: 64M
+    mem_limit: 256M
+    ports:
+      - 5000:5000
+    restart: always
